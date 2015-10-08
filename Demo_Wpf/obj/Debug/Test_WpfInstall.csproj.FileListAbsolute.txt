@@ -1,0 +1,16 @@
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\Window1.baml
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\Window1.g.cs
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\App.g.cs
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\Test_WpfInstall.Properties.Resources.resources
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\Test_WpfInstall.csproj.GenerateResource.Cache
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\bin\Debug\WPF Installation Test.exe.manifest
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\bin\Debug\WPF Installation Test.application
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\bin\Debug\WPF Installation Test.exe
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\bin\Debug\WPF Installation Test.pdb
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\WPF Installation Test_MarkupCompile.cache
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\WPF Installation Test.g.resources
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\WPF Installation Test.exe.manifest
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\WPF Installation Test.application
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\WPF Installation Test.exe
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\WPF Installation Test.pdb

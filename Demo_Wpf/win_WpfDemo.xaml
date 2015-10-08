@@ -1,0 +1,1114 @@
+﻿<Window x:Class="Demo_Wpf.win_WpfDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WPF Demo" Height="500" Width="721"
+        FontFamily="Segoe UI"
+        >
+    <Window.CommandBindings>
+        <CommandBinding Command="New" CanExecute="CommonCommandBinding_CanExecute" />
+        <CommandBinding Command="Open" CanExecute="CommonCommandBinding_CanExecute" />
+        <CommandBinding Command="Save" CanExecute="CommonCommandBinding_CanExecute" />
+    </Window.CommandBindings>
+    <TabControl Name="tabControl1"
+                HorizontalAlignment="Stretch" Margin="0,0,0,0"
+                >
+        <TabItem Name="tabitem_Intro" Header="Intro">
+            <Grid>
+                <TextBlock FontSize="18"
+                           FontStyle="Italic"
+                           HorizontalAlignment="Left"  VerticalAlignment="Top"
+                           Margin="10,10,0,0"
+                           >
+                    This program demonstrates a variety of WPF display features and techniques.
+                </TextBlock>
+                <TextBlock FontSize="12"
+                           HorizontalAlignment="Left"  VerticalAlignment="Top"
+                           Margin="10,60,0,0"
+                           TextWrapping="Wrap"
+                           >
+                    The features and techniques include various types of panels such as the StackPanel, the DockPanel, the WrapPanel, and the Canvas. Also demonstrated are regular grids and the UniformGrid. Another tab shows how to make user-resizable grids.
+                </TextBlock>
+            </Grid>
+        </TabItem>
+        <TabItem Name="tabitem_Pictures" Header="Pictures" ToolTip="Images and Videos">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="22" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="1" Grid.Row="0"
+                           Margin="10"
+                           HorizontalAlignment="Left" VerticalAlignment="Top">
+                    Image
+                </TextBlock>
+                <TextBlock Grid.Row="0" Grid.Column="2"
+                           Margin="10"
+                           HorizontalAlignment="Left" VerticalAlignment="Top">
+                    MediaElement
+                </TextBlock>
+                <Image Name="img_01"
+                       Grid.Row="1" Grid.Column="1"
+                       Height="200" Width="200" Margin="10"
+                       HorizontalAlignment="Left" Stretch="Uniform"
+                       Source=".\i\field.jpeg"
+                       />
+                <StackPanel Grid.Row="3" Grid.Column="1"
+                            Orientation="Horizontal">
+                    <Button Name="btn_A" Height="30" Width="30" Margin="4" Click="btn_A_Click">A</Button>
+                    <Button Name="btn_B" Height="30" Width="30" Margin="4" Click="btn_B_Click">B</Button>
+                    <Button Name="btn_ImgC" Height="30" Width="30" Margin="4" Click="btn_ImgC_Click">C</Button>
+                </StackPanel>
+                <MediaElement Name="oMediaElement_01"
+                              Grid.Row="1" Grid.Column="2"
+                              Height="200" Width="200" Margin="10"
+                              LoadedBehavior="Manual"
+                              Source="http://hubblesource.stsci.edu/sources/video/clips/details/images/hst_1.mpg"
+                              />
+                <StackPanel Grid.Row="2" Grid.Column="2"
+                            Orientation="Horizontal">
+                    <Button Name="btn_Pause" Padding="4" Margin="4" Click="btn_Pause_Click">Pause</Button>
+                    <Button Name="btn_Play" Padding="4" Margin="4" Click="btn_Play_Click">Play</Button>
+                </StackPanel>
+                <StackPanel Grid.Row="3" Grid.Column="2"
+                            Orientation="Horizontal">
+                    <Button Name="btn_01" Height="30" Width="30" Margin="4" Click="btn_01_Click">01</Button>
+                    <Button Name="btn_02" Height="30" Width="30" Margin="4" Click="btn_02_Click">02</Button>
+                    <Button Name="btn_03" Height="30" Width="30" Margin="4" Click="btn_03_Click">03</Button>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem Name="tabitem_Expander" Header="Expander">
+            <Grid>
+                <Expander Header="More Options">
+                    <StackPanel Margin="10,4,0,0">
+                        <CheckBox Margin="4" Content="Option 1" />
+                        <CheckBox Margin="4" Content="Option 2" />
+                        <ComboBox Name="dropdown_Planet" SelectedIndex="2">
+                            <ComboBoxItem>Mercury</ComboBoxItem>
+                            <ComboBoxItem>Venus</ComboBoxItem>
+                            <ComboBoxItem>Earth</ComboBoxItem>
+                            <ComboBoxItem>Mars</ComboBoxItem>
+                            <ComboBoxItem>Jupiter (and beyond the infinite)</ComboBoxItem>
+                            <ComboBoxItem>Saturn</ComboBoxItem>
+                            <ComboBoxItem>Uranus</ComboBoxItem>
+                            <ComboBoxItem>Neptune</ComboBoxItem>
+                        </ComboBox>
+                        <CheckBox Margin="4" Content="Option 3" />
+                        <Label>Piece of pie!</Label>
+                        <CheckBox Margin="4" Content="Option 4" />
+                    </StackPanel>
+                </Expander>
+            </Grid>
+        </TabItem>
+        <TabItem Header="StackPanel" Name="tabitem_StackPanel">
+            <ScrollViewer CanContentScroll="True">
+                <StackPanel Name="oStackPanel_Demo">
+                    <TextBlock Margin="10">StackPanel inside a ScrollViewer:</TextBlock>
+                    <ToggleButton Padding="4" Margin="4">
+                        Ketchup
+                    </ToggleButton>
+                    <ToggleButton Padding="4" Margin="4">
+                        Mustard
+                    </ToggleButton>
+                    <ToggleButton Padding="4" Margin="4">
+                        Pickles
+                    </ToggleButton>
+                    <ToggleButton Padding="4" Margin="4">
+                        Onions
+                    </ToggleButton>
+                    <ToggleButton Padding="4" Margin="4">
+                        Fritos
+                    </ToggleButton>
+                    <ToggleButton Padding="4" Margin="4">
+                        Jalapeños
+                    </ToggleButton>
+                    <ToggleButton Padding="4" Margin="4">
+                        Popcorn
+                    </ToggleButton>
+                    <ToggleButton Padding="4" Margin="4">
+                        Cheese
+                    </ToggleButton>
+                    <ToggleButton Padding="4" Margin="4">
+                        Lettuce
+                    </ToggleButton>
+                    <TextBlock Margin="10">Horizontal StackPanel inside a StackPanel:</TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Padding="4" Margin="4">· 1 ·</Button>
+                        <Button Padding="4" Margin="4">· 2 ·</Button>
+                        <Button Padding="4" Margin="4">· 3 ·</Button>
+                        <Button Padding="4" Margin="4">· 4 ·</Button>
+                        <Button Padding="4" Margin="4">· 5 ·</Button>
+                        <Button Padding="4" Margin="4">· 6 ·</Button>
+                        <Button Padding="4" Margin="4">· 7 ·</Button>
+                        <Button Padding="4" Margin="4">· 8 ·</Button>
+                        <Button Padding="4" Margin="4">· 9 ·</Button>
+                        <Button Padding="4" Margin="4">· 10 ·</Button>
+                        <Button Padding="4" Margin="4">· 11 ·</Button>
+                        <Button Padding="4" Margin="4">· 12 ·</Button>
+                        <Button Padding="4" Margin="4">· 13 ·</Button>
+                        <Button Padding="4" Margin="4">· 14 ·</Button>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="DockPanel" Name="tabitem_DockPanel">
+            <DockPanel LastChildFill="True">
+                <Button Content="Dock=Left" DockPanel.Dock="Left" Padding="10" />
+                <Button Content="Dock=Left" DockPanel.Dock="Left" Padding="10" />
+                <Button Content="Dock=Top" DockPanel.Dock="Top" Padding="10" />
+                <Button Content="Dock=Left" DockPanel.Dock="Left" Padding="10" />
+                <Button Content="Dock=Bottom" DockPanel.Dock="Bottom" Padding="10" />
+                <Button Content="Dock=Left" DockPanel.Dock="Left" Padding="10" />
+                <Button Content="Dock=Right" DockPanel.Dock="Right" Padding="10" />
+                <Button Content="Last Child" Padding="10" />
+            </DockPanel>
+        </TabItem>
+        <TabItem Header="Dynamic DockPanel" Name="tabitem_DynamicDockPanel">
+            <DockPanel Name="pnl_DynamicDock" LastChildFill="True">
+                <TextBox Text="Dock=Top" DockPanel.Dock="Top" Padding="10" />
+                <Button Name="btn_AddRow" Content="Add Row"
+                        DockPanel.Dock="Bottom"
+                        Padding="10"
+                        Click="btn_AddRow_Click"
+                        />
+                <TextBox Text="Last Child" TextWrapping="Wrap" Padding="10" />
+            </DockPanel>
+        </TabItem>
+        <TabItem Header="WrapPanel" Name="tabitem_WrapPanel">
+            <ScrollViewer CanContentScroll="True">
+                <StackPanel>
+                    <TextBlock Padding="6" TextWrapping="Wrap">The WrapPanel is similar to the StackPanel in that controls are positioned in either a stack or row based on the Orientation property. In addition to stacking, the WrapPanel provides wrapping support for contained controls. Thus if more controls are added to a WrapPanel than can be displayed by the width of the WrapPanel, they are wrapped around to form an additional stack or row. This example shows a WrapPanel inside a StackPanel inside a ScrollViewer.</TextBlock>
+                    <WrapPanel Orientation="Horizontal">
+                        <Button Padding="2" Margin="2" Content="Button 01" Foreground="DarkGoldenrod" />
+                        <Button Padding="2" Margin="2" Content="Button 02" />
+                        <Button Padding="2" Margin="2" Content="Button 03" />
+                        <Button Padding="2" Margin="2" Content="Button 04" />
+                        <Button Padding="2" Margin="2" Content="Button 05" Foreground="DarkMagenta" />
+                        <Button Padding="2" Margin="2" Content="Button 06" />
+                        <Button Padding="2" Margin="2" Content="Button 07" />
+                        <Button Padding="2" Margin="2" Content="Button 08" />
+                        <Button Padding="2" Margin="2" Content="Button 09" Background="SkyBlue" />
+                        <Button Padding="2" Margin="2" Content="Button 10" />
+                        <Button Padding="2" Margin="2" Content="Button 11" />
+                        <Button Padding="2" Margin="2" Content="Button 12" Background="Beige" />
+                        <Button Padding="2" Margin="2" Content="Button 13" />
+                        <Button Padding="2" Margin="2" Content="Button 14" />
+                        <Button Padding="2" Margin="2" Content="Button 15" />
+                        <Button Padding="2" Margin="2" Content="Button 16" Foreground="CadetBlue" />
+                        <Button Padding="2" Margin="2" Content="Button 17" />
+                        <Button Padding="2" Margin="2" Content="Button 18" />
+                        <Button Padding="2" Margin="2" Content="Button 19" />
+                        <Button Padding="2" Margin="2" Content="Button 20" />
+                        <Button Padding="2" Margin="2" Content="Button 21" />
+                        <Button Padding="2" Margin="2" Content="Button 22" />
+                        <Button Padding="2" Margin="2" Content="Button 23" Foreground="Blue" />
+                        <Button Padding="2" Margin="2" Content="Button 24" />
+                        <Button Padding="2" Margin="2" Content="Button 25" />
+                        <Button Padding="2" Margin="2" Content="Button 26" Foreground="Coral" />
+                        <Button Padding="2" Margin="2" Content="Button 27" Background="BlanchedAlmond" />
+                        <Button Padding="2" Margin="2" Content="Button 28" />
+                        <Button Padding="2" Margin="2" Content="Button 29" />
+                        <Button Padding="2" Margin="2" Content="Button 30" />
+                        <Button Padding="2" Margin="2" Content="Button 31" />
+                        <Button Padding="2" Margin="2" Content="Button 32" Foreground="Green" />
+                        <Button Padding="2" Margin="2" Content="Button 33" />
+                        <Button Padding="2" Margin="2" Content="Button 34" />
+                    </WrapPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Grid" Name="tabitem_Grid">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="28" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Content="This tab demonstrates the XAML grid." />
+                <Label Grid.Row="1" Grid.Column="0" Content="E-Mail:" />
+                <Label Grid.Row="2" Grid.Column="0" Content="Comment:" />
+                <TextBox Grid.Column="1" Grid.Row="1" Margin="3" />
+                <TextBox Grid.Column="1" Grid.Row="2" Margin="3" TextWrapping="WrapWithOverflow" />
+                <Button Content="Send"
+                        Grid.Column="1" Grid.Row="3"
+                        HorizontalAlignment="Right"
+                        MinWidth="80" Margin="3"
+                        />
+                <TextBox Name="text_GridDescr"
+                         Grid.Row="2" Grid.Column="2"
+                         Margin="3"
+                         BorderThickness="4" BorderBrush="IndianRed" Background="Cornsilk"
+                         IsReadOnly="True"
+                         TextWrapping="WrapWithOverflow" 
+                         />
+            </Grid>
+        </TabItem>
+        <TabItem Header="UniformGrid" Name="tabitem_UniformGrid">
+            <UniformGrid Name="uniformGrid1"
+                         Rows="8"
+                         Columns="8">
+                <Button Content="Tycho"
+                        Margin="2"
+                        />
+                <Button Content="Cameron"
+                        Margin="2"
+                        />
+                <Button Content="Neper"
+                        Margin="2"
+                        />
+                <Button Content="Nöggerath"
+                        Margin="2"
+                        />
+                <Button Content="Helicon"
+                        Margin="2"
+                        />
+                <Button Content=""
+                        Margin="2"
+                        />
+                <Button Content=""
+                        Margin="2"
+                        />
+                <Button Content="Korolev"
+                        Margin="2"
+                        />
+                <Button Content=""
+                        Margin="2"
+                        />
+                <Button Content=""
+                        Margin="2"
+                        />
+                <Button Content="Saunder"
+                        Margin="2"
+                        />
+                <Button Content="Hargreaves"
+                        Margin="2"
+                        />
+                <Button Content=""
+                        Margin="2"
+                        />
+                <Button Content=""
+                        Margin="2"
+                        />
+                <Button Content="Vasco da Gama"
+                        Margin="2"
+                        />
+                <Button Content="Tempel"
+                        Margin="2"
+                        />
+                <Button Content="Ellerman"
+                        Margin="2"
+                        />
+                <Button Content="Scheele"
+                        Margin="2"
+                        />
+                <TextBlock TextWrapping="Wrap">UniformGrid provides a way to arrange content in a grid</TextBlock>
+                <TextBlock TextWrapping="Wrap">where all the cells have the same size.</TextBlock>
+            </UniformGrid>
+        </TabItem>
+        <TabItem Header="Resizable Grid" Name="tabitem_ResizableGrid">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <!-- Vertical splitters: -->
+                <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="5"
+                              Width="5"
+                              VerticalAlignment="Stretch"
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC"
+                              />
+                <GridSplitter Grid.Row="0" Grid.Column="3" Grid.RowSpan="5"
+                              Width="5"
+                              VerticalAlignment="Stretch"
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC"
+                              />
+                <GridSplitter Grid.Row="0" Grid.Column="5" Grid.RowSpan="5"
+                              Width="5"
+                              VerticalAlignment="Stretch" 
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC"
+                              />
+                <GridSplitter Grid.Row="0" Grid.Column="7" Grid.RowSpan="5"
+                              Width="5"
+                              VerticalAlignment="Stretch" 
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC"
+                              />
+
+                <!-- Horizontal splitters: -->
+                <GridSplitter Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="9"
+                              Height="5"
+                              HorizontalAlignment="Stretch"
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC"
+                              />
+                <GridSplitter Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="9"
+                              Height="5"
+                              HorizontalAlignment="Stretch"
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC"
+                              />
+
+                <!-- Cell labels: -->
+                <TextBlock Text="0, 0"
+                           Grid.Row="0" Grid.Column="0"
+                           Margin="10"
+                           />
+                <TextBlock Text="0, 2"
+                           Grid.Row="0" Grid.Column="2"
+                           Margin="10"
+                           />
+                <TextBlock Text="0, 4"
+                           Grid.Row="0" Grid.Column="4"
+                           Margin="10"
+                           />
+                <TextBlock Text="0, 6"
+                           Grid.Row="0" Grid.Column="6"
+                           Margin="10"
+                           />
+                <TextBlock Text="0, 8"
+                           Grid.Row="0" Grid.Column="8"
+                           Margin="10"
+                           />
+                <TextBlock Text="2, 0"
+                           Grid.Row="2" Grid.Column="0"
+                           Margin="10"
+                           />
+                <TextBlock Text="2, 2"
+                           Grid.Row="2" Grid.Column="2"
+                           Margin="10"
+                           />
+                <TextBlock Text="2, 4"
+                           Grid.Row="2" Grid.Column="4"
+                           Margin="10"
+                           />
+                <TextBlock Text="2, 6"
+                           Grid.Row="2" Grid.Column="6"
+                           Margin="10"
+                           />
+                <TextBlock Text="2, 8"
+                           Grid.Row="2" Grid.Column="8"
+                           Margin="10"
+                           />
+                <TextBlock Text="4, 0"
+                           Grid.Row="4" Grid.Column="0"
+                           Margin="10"
+                           />
+                <TextBlock Text="4, 2"
+                           Grid.Row="4" Grid.Column="2"
+                           Margin="10"
+                           />
+                <TextBlock Text="4, 4"
+                           Grid.Row="4" Grid.Column="4"
+                           Margin="10"
+                           />
+                <TextBlock Text="4, 6"
+                           Grid.Row="4" Grid.Column="6"
+                           Margin="10"
+                           />
+                <TextBlock Text="4, 8"
+                           Grid.Row="4" Grid.Column="8"
+                           Margin="10"
+                           />
+            </Grid>
+        </TabItem>
+        <TabItem Header="Canvas" Name="tabitem_Canvas">
+            <Canvas>
+                <Ellipse Fill="Green"
+                         Width="80" Height="80" Canvas.Left="30" Canvas.Top="20"    
+                         Canvas.ZIndex="1"
+                         />
+                <Ellipse Fill="Blue"
+                         Width="100" Height="100" Canvas.Left="60" Canvas.Top="40"
+                         />
+                <Rectangle Fill="DarkMagenta" Height="49" Canvas.Left="86" Stroke="Black" Canvas.Top="65" Width="100" />
+                <Rectangle Fill="Black" Height="2" Canvas.Left="200" Stroke="Black" Canvas.Top="65" Width="200" />
+                <Button x:Name="button" Content="Button" Canvas.Left="234" Canvas.Top="114" Width="75" />
+            </Canvas>
+        </TabItem>
+        <TabItem Header="ViewBox" Name="tabitem_ViewBox">
+            <Viewbox Stretch="Uniform">
+                <Button Content="Test" />
+            </Viewbox>
+        </TabItem>
+        <TabItem Name="tabitem_TextBoxes" Header="Text" ToolTip="Labels, TextBoxes, and TextBlocks">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" MinHeight="26" />
+                    <RowDefinition Height="Auto" MinHeight="44" />
+                    <RowDefinition Height="Auto" MinHeight="44" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" MinHeight="50" />
+                    <RowDefinition Height="28" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="250" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="50" />
+                </Grid.ColumnDefinitions>
+                <GridSplitter Grid.Column="1" Grid.RowSpan="5"
+                              Width="5"
+                              HorizontalAlignment="Right" VerticalAlignment="Stretch" 
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC" />
+                <GridSplitter Grid.Column="3" Grid.RowSpan="5"
+                              Width="5"
+                              HorizontalAlignment="Right" VerticalAlignment="Stretch" 
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC" />
+                <GridSplitter Grid.Column="5" Grid.RowSpan="5"
+                              Width="5"
+                              HorizontalAlignment="Right" VerticalAlignment="Stretch" 
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC" />
+                <GridSplitter Grid.Column="7" Grid.RowSpan="5"
+                              Width="5"
+                              HorizontalAlignment="Right" VerticalAlignment="Stretch" 
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC" />
+                <Label Grid.Row="0" Grid.Column="0"
+                       FontWeight="Bold"
+                       >
+                    Labels:
+                </Label>
+                <Label Grid.Row="1" Grid.Column="0"
+                       ToolTip="Label"
+                       >
+                    Labels in WPF support single-line text.
+                </Label>
+                <Label Grid.Row="2" Grid.Column="0"
+                       Background="BlanchedAlmond"
+                       Margin="3" Padding="4"
+                       ToolTip="Label"
+                       >
+                    We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.
+                </Label>
+                <Label Grid.Row="3" Grid.Column="0"
+                       BorderThickness="4" BorderBrush="IndianRed"
+                       ToolTip="Label"
+                       >
+                    This label uses a custom border brush.
+                </Label>
+                <Label Grid.Row="1" Grid.Column="2" Content="¤ ¤" />
+                <Label Grid.Row="2" Grid.Column="2" Content="¤ ¤" />
+                <Label Grid.Row="3" Grid.Column="2" Content="¤ ¤" />
+                <Label Content="TextBoxes:"
+                       Grid.Column="4"
+                       FontWeight="Bold"
+                       Height="26" VerticalAlignment="Top"
+                       />
+                <TextBox Grid.Row="1" Grid.Column="4"
+                         Margin="3"
+                         MinLines="2"
+                         TextWrapping="NoWrap"
+                         ToolTip="TextBox"
+                         >
+                    NoWrap ◊ Governments are instituted among Men, deriving their just powers from the consent of the governed.
+                </TextBox>
+                <TextBox Grid.Row="2" Grid.Column="4"
+                         Margin="3"
+                         MinLines="2"
+                         TextWrapping="Wrap"
+                         ToolTip="TextBox"
+                         >
+                    Wrap ◊ Governments are instituted among Men, deriving their just powers from the consent of the governed.
+                </TextBox>
+                <TextBox Grid.Row="3" Grid.Column="4"
+                         Margin="3"
+                         MinLines="2"
+                         TextWrapping="WrapWithOverflow"
+                         ToolTip="TextBox"
+                         >
+                    WrapWithOverflow ◊ Governments are instituted among Men, deriving their just powers from the consent of the governed.
+                </TextBox>
+                <TextBox Grid.Row="4" Grid.Column="4"
+                         BorderThickness="4" BorderBrush="IndianRed"
+                         Margin="3"
+                         MinLines="2"
+                         AcceptsReturn="True"
+                         TextWrapping="Wrap"
+                         ToolTip="TextBox"
+                         >
+                    AcceptsReturn, Wrap ◊ This text box uses a custom border brush. Governments are instituted among Men, deriving their just powers from the consent of the governed.
+                </TextBox>
+                <Label Content="TextBlocks:"
+                       Grid.Column="6"
+                       FontWeight="Bold"
+                       Height="26" VerticalAlignment="Top"
+                       />
+                <TextBlock Grid.Row="1" Grid.Column="6"
+                         Margin="3"
+                         TextWrapping="NoWrap"
+                           ToolTip="TextBlock"
+                           >
+                    NoWrap ◊ When in the Course of human events it becomes necessary for one people to dissolve the political bands ...
+                </TextBlock>
+                <TextBlock Grid.Row="2" Grid.Column="6"
+                           Margin="3"
+                           TextWrapping="Wrap"
+                           ToolTip="TextBlock"
+                           >
+                    Wrap ◊ When in the Course of human events it becomes necessary for one people to dissolve the political bands ...
+                </TextBlock>
+                <TextBlock Grid.Row="3" Grid.Column="6"
+                         Margin="3"
+                         TextWrapping="WrapWithOverflow"
+                           ToolTip="TextBlock"
+                         >
+                    WrapWithOverflow ◊ When in the Course of human events it becomes necessary for one people to dissolve the political bands ...
+                </TextBlock>
+                <TextBlock Grid.Row="4" Grid.Column="6"
+                           Background="BlanchedAlmond"
+                           Margin="3" Padding="4"
+                           TextWrapping="WrapWithOverflow"
+                           IsHyphenationEnabled="True"
+                           ToolTip="TextBlock"
+                           >
+                    WrapWithOverflow ◊ This text block is hyphenation-enabled. Long words such as antidisestablishmentarianism may be split across multiple lines of text. When in the Course of human events it becomes necessary for one people to dissolve the political bands which have connected them with another and to assume among the powers of the earth, the separate and equal station ...
+                </TextBlock>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Text Boxes" Name="tabitem_NumericTextBox">
+            <Canvas>
+                <TextBox Name="textbox_Numeric"
+                         Canvas.Left="10" Canvas.Top="10"
+                         Height="34" Width="174"
+                         BorderThickness="2"
+                         FontSize="14"
+                         PreviewTextInput="textbox_Numeric_PreviewTextInput"
+                         DataObject.Pasting="textbox_Numeric_Pasting"
+                         >
+                    <TextBox.Effect>
+                        <DropShadowEffect/>
+                    </TextBox.Effect>
+                </TextBox>
+                    <TextBox Name="textbox_Scrolling"
+                             Canvas.Left="210" Canvas.Top="10"
+                             Height="100" Width="174"
+                             AcceptsReturn="True"
+                             VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"
+                             >
+                    <TextBox.Effect>
+                        <DropShadowEffect/>
+                    </TextBox.Effect>
+                </TextBox>
+            </Canvas>
+        </TabItem>
+        <TabItem Header="ControlTemplates" Name="tabitem_CtrlTmpls">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0"
+                       Margin="10,10,10,10"
+                       >
+                    Hi
+                </Label>
+                <Button RenderTransformOrigin="0.625,2.55"
+                        Grid.Row="1" Grid.Column="0"
+                        Margin="10,10,10,10"
+                        Style="{DynamicResource StyleGelButton}"
+                        >
+                    <Button.Content>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <RadioButton Content="RB 1" Grid.Row="0" IsChecked="True" />
+                            <CheckBox Content="CB 2" Grid.Row="1" IsChecked="True" />
+                        </Grid>
+                    </Button.Content>
+                </Button>
+                <Button Name="btn_CtrlTmpl_01"
+                        Height="50" Width="150"
+                        Margin="10,10,10,10"
+                        Grid.Row="0" Grid.Column="1"
+                        Content="Click Me"
+                        Click="btn_CtrlTmpl_01_Click"
+                        >
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Ellipse Height="50" Width="150"
+                                     Fill="LightBlue"
+                                     />
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Name="btn_CtrlTmpl_02"
+                        Template="{DynamicResource CTGelButton}"
+                        Grid.Row="2" Grid.Column="1"
+                        Margin="10,10,10,10"
+                        Content="Press Me"
+                        Click="btn_CtrlTmpl_02_Click"
+                        >
+                </Button>
+                <ListBox IsSynchronizedWithCurrentItem="True" HorizontalAlignment="Left"
+                         Grid.Row="0" Grid.Column="2"
+                         Width="96" Margin="10,10,10,10"
+                         BorderBrush="LightBlue" BorderThickness="7" Background="Black"
+                         Template="{DynamicResource CTListBox}"
+                         >
+                    <ListBoxItem Content="Item 1"/>
+                    <ListBoxItem Content="Item 2"/>
+                    <ListBoxItem Content="Item 3"/>
+                    <ListBoxItem Content="Item 4"/>
+                </ListBox>
+                <ListBox IsSynchronizedWithCurrentItem="True" HorizontalAlignment="Left"
+                         Width="96" Margin="10,10,10,10"
+                         Grid.Row="0" Grid.Column="3"
+                         BorderBrush="Gold" BorderThickness="2" Background="Blue"
+                         Template="{DynamicResource CTListBox}"
+                         >
+                    <ListBoxItem Content="Item 1"/>
+                    <ListBoxItem Content="Item 2"/>
+                    <ListBoxItem Content="Item 3"/>
+                    <ListBoxItem Content="Item 4"/>
+                </ListBox>
+
+                <ListBox IsSynchronizedWithCurrentItem="True" HorizontalAlignment="Left"
+                         Grid.Row="0" Grid.Column="4"
+                         Width="96" Margin="10,10,10,10"
+                         Template="{DynamicResource CTListBox}"
+                         >
+                    <ListBoxItem Content="Item 1"/>
+                    <ListBoxItem Content="Item 2"/>
+                    <ListBoxItem Content="Item 3"/>
+                    <ListBoxItem Content="Item 4"/>
+                </ListBox>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Toolbars" Name="tabitem_Toolbars">
+            <DockPanel>
+                <ToolBarTray DockPanel.Dock="Top">
+                    <ToolBar>
+                        <Button Command="New" Content="New" />
+                        <Button Command="Open" Content="Open" />
+                        <Button Command="Save" Content="Save" />
+                    </ToolBar>
+                    <ToolBar>
+                        <Button Command="Cut" Content="Cut" />
+                        <Button Command="Copy" Content="Copy" />
+                        <Button Command="Paste" Content="Paste" />
+                        <Separator />
+                        <Label>Font size:</Label>
+                        <ComboBox>
+                            <ComboBoxItem>10</ComboBoxItem>
+                            <ComboBoxItem IsSelected="True">12</ComboBoxItem>
+                            <ComboBoxItem>14</ComboBoxItem>
+                            <ComboBoxItem>16</ComboBoxItem>
+                        </ComboBox>
+                    </ToolBar>
+                    <ToolBar>
+                        <Button Name="btn_Auction" ToolTip="Aucion"
+                                Click="btn_Auction_Click"
+                                >
+                            <Image Source="i/icon16-gavel.gif" />
+                        </Button>
+                        <Button Name="btn_Write" ToolTip="Write">
+                            <Image Source="i/icon16-pencil.gif" />
+                        </Button>
+                    </ToolBar>
+                    <ToolBar>
+                        <Button Name="btn_RotateLeft" ToolTip="Rotate Left"
+                                >
+                            <Image Source="i/icon16-rotateleft.png" />
+                        </Button>
+                        <Button Name="btn_RotateRight" ToolTip="Rotate Right"
+                                >
+                            <Image Source="i/icon16-rotateright.png" />
+                        </Button>
+                    </ToolBar>
+                    <ToolBar>
+                        <TextBox Name="text_01"
+                                 Width="140"
+                                 BorderBrush="Black"
+                                 />
+                    </ToolBar>
+                </ToolBarTray>
+                <TextBox AcceptsReturn="True" />
+            </DockPanel>
+        </TabItem>
+        <TabItem Header="Groups" Name="tabitem_Groups">
+            <Canvas>
+                <Frame Canvas.Left="58" Canvas.Top="49" Height="170" Name="frame1" Width="200"
+                       Background="Chocolate"
+                       >
+                </Frame>
+                <GroupBox Name="groupBox1"
+                          Canvas.Left="301" Canvas.Top="49"
+                          Header="GroupBox"
+                          Height="170" Width="200"
+                          Background="Khaki"
+                          >
+                    <StackPanel>
+                        <RadioButton Margin="2">Option 01</RadioButton>
+                        <RadioButton Margin="2">Option 02</RadioButton>
+                        <RadioButton Margin="2">Option 03</RadioButton>
+                        <RadioButton Margin="2">Option 04</RadioButton>
+                    </StackPanel>
+                </GroupBox>
+                <Label Canvas.Left="58" Canvas.Top="49" Height="28" Name="label3" Width="120" FontSize="14" FontWeight="Bold">Frame</Label>
+                <RadioButton Name="radioButton_A"
+                             Canvas.Left="72" Canvas.Top="80" Height="16" Width="120">
+                    Option A
+                </RadioButton>
+                <RadioButton Name="radioButton_B"
+                             Canvas.Left="72" Canvas.Top="100" Height="16" Width="120">
+                    Option B
+                </RadioButton>
+                <RadioButton Name="radioButton_C"
+                             Canvas.Left="72" Canvas.Top="120" Height="16" Width="120">
+                    Option C
+                </RadioButton>
+                <RadioButton Name="radioButton_X"
+                             Canvas.Left="530" Canvas.Top="80" Height="16" Width="120">
+                    Option X
+                </RadioButton>
+            </Canvas>
+        </TabItem>
+        <TabItem Header="Scrolling" Name="tabitem_Scrolling" ToolTip="ScrollViewer">
+            <ScrollViewer CanContentScroll="True">
+                <StackPanel Name="oStackPanel_Scrolling">
+                    <TextBlock Padding="4" Margin="4" Background="Red" Foreground="White">
+                        Ketchup
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="Gold">
+                        Mustard
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="YellowGreen">
+                        Pickles
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="LavenderBlush">
+                        Onions
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="Goldenrod">
+                        Fritos
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="Green" Foreground="White">
+                        Jalapeños
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="Gainsboro">
+                        Popcorn
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="Orange">
+                        Cheese
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="DarkSeaGreen">
+                        Lettuce
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="NavajoWhite">
+                        Egg
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="DeepPink">
+                        Bacon
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="DarkOrange">
+                        Macaroni
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="Cornsilk">
+                        Salt
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="DarkSlateGray" Foreground="White">
+                        Pepper
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="DarkRed" Foreground="White">
+                        Chili powder
+                    </TextBlock>
+                    <TextBlock Padding="4" Margin="4" Background="Crimson" Foreground="White">
+                        Bell pepper
+                    </TextBlock>
+                </StackPanel>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Peripheries" Name="tabitem_Peripheries" ToolTip="Margins, Padding, and Borders">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Vertical splitters: -->
+                <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="1"
+                              Width="5"
+                              VerticalAlignment="Stretch" 
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC"
+                              />
+
+                <!-- Cells: -->
+                <StackPanel>
+                    <TextBlock Name="text_Margin"
+                               Margin="10">Margin 10</TextBlock>
+                    <Slider Name="slider_Margin" ToolTip="Margin size"
+                            Margin="10"
+                            Maximum="30" LargeChange="5" SmallChange="1" TickPlacement="Both" IsSnapToTickEnabled="True"
+                            Value="10"
+                            ValueChanged="slider_Margin_ValueChanged"
+                            />
+                    <TextBlock Name="text_Border"
+                               Margin="10">Border 4</TextBlock>
+                    <Slider Name="slider_Border" ToolTip="Border width"
+                            Margin="10"
+                            Maximum="30" LargeChange="5" SmallChange="1" TickPlacement="Both" IsSnapToTickEnabled="True"
+                            Value="4"
+                            ValueChanged="slider_Border_ValueChanged"
+                            />
+                    <TextBlock Name="text_Padding"
+                               Margin="10">Padding 10</TextBlock>
+                    <Slider Name="slider_Padding" ToolTip="Padding width"
+                            Margin="10"
+                            Maximum="30" LargeChange="5" SmallChange="1" TickPlacement="Both" IsSnapToTickEnabled="True"
+                            Value="10"
+                            ValueChanged="slider_Padding_ValueChanged"
+                            />
+                </StackPanel>
+                <GroupBox Header="Demo"
+                          Grid.Row="0" Grid.Column="2"
+                          BorderBrush="Black" BorderThickness="2"                          
+                          >
+                    <TextBox Name="text_PeripheryDemo"
+                               Text="Just what do you think you're doing, Dave?"
+                               FontSize="18"
+                             Margin="10" Padding="10"
+                             BorderBrush="Brown" BorderThickness="4"
+                               Background="Gold"
+                               TextWrapping="WrapWithOverflow"
+                               />
+                </GroupBox>
+            </Grid>
+        </TabItem>
+        <TabItem Header="File Browsing" Name="tabitem_FileBrowsing">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" MinWidth="5" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" MinWidth="5" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <!-- Vertical splitters: -->
+                <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="5"
+                              Width="5"
+                              VerticalAlignment="Stretch"
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC"
+                              />
+                <GridSplitter Grid.Row="0" Grid.Column="3" Grid.RowSpan="5"
+                              Width="5"
+                              VerticalAlignment="Stretch"
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC"
+                              />
+                <GridSplitter Grid.Row="0" Grid.Column="5" Grid.RowSpan="5"
+                              Width="5"
+                              VerticalAlignment="Stretch" 
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC"
+                              />
+                <GridSplitter Grid.Row="0" Grid.Column="7" Grid.RowSpan="5"
+                              Width="5"
+                              VerticalAlignment="Stretch" 
+                              ResizeBehavior="PreviousAndNext"
+                              Background="#FFBCBCBC"
+                              />
+
+                <!-- Content: -->
+
+                <ListView Name="list_FolderBrowser"
+                          BorderBrush="Black"
+                          ItemsSource="{Binding}"
+                          Grid.Column="0"
+                          Margin="10" SelectionChanged="list_FolderBrowser_SelectionChanged">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Name" Width="Auto">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="{Binding ImagePath}"/>
+                                            <TextBlock Text="{Binding Name}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Ext" DisplayMemberBinding="{Binding Ext}" Width="Auto"/>
+                            <GridViewColumn Header="Size" DisplayMemberBinding="{Binding Size}" Width="Auto"/>
+                            <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}" Width="Auto"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+                <Grid Name="grid_FileBrowser"
+                            Margin="10"
+                            Grid.Column="2"
+                            >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBox Name="text_CurrentPath"
+                             Grid.Row="0"
+                             Margin="0,0,0,10"
+                             TextChanged="text_CurrentPath_TextChanged">
+                        \
+                    </TextBox>
+                    <Button Name="btn_UpOneLevel"
+                            Grid.Row="1"
+                            Margin="0,0,0,10"
+                            Click="btn_UpOneLevel_Click"
+                            >
+                        Up One Level
+                    </Button>
+                    <ListView Name="list_Files"
+                              Grid.Row="2"
+                              BorderBrush="Black" ItemsSource="{Binding}"
+                              MouseDoubleClick="list_Files_MouseDoubleClick"
+                              SelectionChanged="list_Files_SelectionChanged"
+                              Margin="0,0,0,0"
+                              >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Name" Width="100">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="{Binding ImagePath}"/>
+                                                <TextBlock Text="{Binding Name}"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Ext" DisplayMemberBinding="{Binding Ext}" Width="Auto"/>
+                                <GridViewColumn Header="Size" DisplayMemberBinding="{Binding Size}" Width="Auto"/>
+                                <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}" Width="Auto"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+
+                <TextBlock Name="text_FileName"
+                           Text=""
+                           Grid.Column="4"
+                           Margin="10"
+                           />
+            </Grid>
+        </TabItem>
+        <TabItem Header="List Controls" Name="tabitem_ListCtrls">
+            <StackPanel>
+                <ListBox Name="listbox_01" >
+                    <Button Content="Button"/>
+                    <CheckBox Content="Checkbox"/>
+                    <Separator/>
+                    <ListBoxItem Name="oListBoxItem_01" Content="ListBoxItem" />
+                    <ListBoxItem Name="oListBoxItem_02" Content="ListBoxItem" />
+                    <ListBoxItem Content="ListBoxItem" />
+                    <ListBoxItem Content="ListBoxItem" />
+                    <ListBoxItem Content="ListBoxItem" />
+                    <ListBoxItem Content="ListBoxItem" />
+                    <ListBoxItem Content="ListBoxItem" />
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="100">Label</Label>
+                        <Label Width="40">Label</Label>
+                        <Label Width="100">Label</Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="100">Longer label</Label>
+                        <Label Width="40">Longer label</Label>
+                        <Label Width="100">Longer label</Label>
+                    </StackPanel>
+                </ListBox>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Focus" Name="tabitem_Focus">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="140" />
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBox Name="textbox_Focus_01" Grid.Row="0" Grid.Column="0" />
+                <TextBox Name="textbox_Focus_02" Grid.Row="1" Grid.Column="0" />
+                <TextBox Name="textbox_Focus_03" Grid.Row="2" Grid.Column="0" />
+                <ListBox Name="listbox_Focus_04" Grid.Row="3" Grid.Column="0" Height="120">
+                    <ListBoxItem>ListBox Item #1</ListBoxItem>
+                    <ListBoxItem>ListBox Item #2</ListBoxItem>
+                    <ListBoxItem>ListBox Item #3</ListBoxItem>
+                    <ListBoxItem>ListBox Item #4</ListBoxItem>
+                    <ListBoxItem>ListBox Item #5</ListBoxItem>
+                </ListBox>
+                <Button Name="btn_SetFocus_01" Grid.Row="0" Grid.Column="1" Click="btn_SetFocus_01_Click">Set Focus</Button>
+                <Button Name="btn_SetFocus_02" Grid.Row="1" Grid.Column="1" Click="btn_SetFocus_02_Click">Set Focus</Button>
+                <Button Name="btn_SetFocus_03" Grid.Row="2" Grid.Column="1" Click="btn_SetFocus_03_Click">Set Focus</Button>
+                <Button Name="btn_SetFocus_04" Grid.Row="3" Grid.Column="1" Click="btn_SetFocus_04_Click">Set Focus</Button>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>

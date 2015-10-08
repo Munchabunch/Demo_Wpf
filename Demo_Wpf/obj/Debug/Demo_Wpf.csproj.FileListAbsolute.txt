@@ -1,0 +1,62 @@
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\bin\Debug\WPF Misc. Test.exe.manifest
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\bin\Debug\WPF Misc. Test.application
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\bin\Debug\WPF Misc. Test.exe
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\bin\Debug\WPF Misc. Test.pdb
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\bin\Debug\itextsharp.dll
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\bin\Debug\itextsharp.xml
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\obj\Debug\win_WpfDemo.baml
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\obj\Debug\win_WpfDemo.g.cs
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\obj\Debug\App.g.cs
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\obj\Debug\WPF Misc. Test_MarkupCompile.cache
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\obj\Debug\WPF Misc. Test.g.resources
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\obj\Debug\Test_Wpf.Properties.Resources.resources
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\obj\Debug\Demo_Wpf.csproj.GenerateResource.Cache
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\obj\Debug\WPF Misc. Test.exe.manifest
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\obj\Debug\WPF Misc. Test.application
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\obj\Debug\WPF Misc. Test.exe
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\obj\Debug\WPF Misc. Test.pdb
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\bin\Debug\itextsharp.dll
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\bin\Debug\itextsharp.xml
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\obj\Debug\win_WpfDemo.baml
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\obj\Debug\win_WpfDemo.g.cs
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\obj\Debug\App.g.cs
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.csproj.GenerateResource.Cache
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\obj\Debug\App.baml
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\bin\Debug\video\breakaway.mpeg
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\bin\Debug\video\ham.mp4
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\bin\Debug\video\parachute.avi
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.csprojResolveAssemblyReference.cache
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\bin\Debug\Demo_Wpf.exe.manifest
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\bin\Debug\Demo_Wpf.application
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\bin\Debug\Demo_Wpf.exe
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\bin\Debug\Demo_Wpf.pdb
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf_Content.g.cs
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf_MarkupCompile.cache
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.g.resources
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.Properties.Resources.resources
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.exe.manifest
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.application
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.exe
+C:\Users\michael.adams4\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.pdb
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.exe
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.pdb
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\bin\Debug\video\breakaway.mpeg
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\bin\Debug\video\ham.mp4
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\bin\Debug\video\parachute.avi
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\bin\Debug\Demo_Wpf.exe.manifest
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\bin\Debug\Demo_Wpf.application
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\bin\Debug\Demo_Wpf.exe
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\bin\Debug\Demo_Wpf.pdb
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.csprojResolveAssemblyReference.cache
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\obj\Debug\win_WpfDemo.baml
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\obj\Debug\App.baml
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\obj\Debug\win_WpfDemo.g.cs
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\obj\Debug\App.g.cs
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf_Content.g.cs
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf_MarkupCompile.cache
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.g.resources
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.Properties.Resources.resources
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.csproj.GenerateResource.Cache
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.exe.manifest
+C:\Users\Mike\PD\Demo_Wpf\Demo_Wpf\obj\Debug\Demo_Wpf.application

@@ -1,0 +1,38 @@
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\Window1.baml
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\Window1.g.cs
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\App.g.cs
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\Test_Wpf.csproj.GenerateResource.Cache
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\bin\Debug\WPF Misc. Test.exe.manifest
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\bin\Debug\WPF Misc. Test.application
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\bin\Debug\WPF Misc. Test.exe
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\bin\Debug\WPF Misc. Test.pdb
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\WPF Misc. Test_MarkupCompile.cache
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\WPF Misc. Test.g.resources
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\Test_Wpf.Properties.Resources.resources
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\WPF Misc. Test.exe.manifest
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\WPF Misc. Test.application
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\WPF Misc. Test.exe
+C:\Users\michael.adams4\PD\Test_WpfInstall\Test_WpfInstall\obj\Debug\WPF Misc. Test.pdb
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\obj\Debug\WPF Misc. Test.exe
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\obj\Debug\WPF Misc. Test.pdb
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\bin\Debug\WPF Misc. Test.exe.manifest
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\bin\Debug\WPF Misc. Test.application
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\bin\Debug\WPF Misc. Test.exe
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\bin\Debug\WPF Misc. Test.pdb
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\obj\Debug\Window1.baml
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\obj\Debug\Window1.g.cs
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\obj\Debug\App.g.cs
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\obj\Debug\WPF Misc. Test_MarkupCompile.cache
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\obj\Debug\WPF Misc. Test.g.resources
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\obj\Debug\Test_Wpf.Properties.Resources.resources
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\obj\Debug\Test_Wpf.csproj.GenerateResource.Cache
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\obj\Debug\WPF Misc. Test.exe.manifest
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\obj\Debug\WPF Misc. Test.application
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\obj\Debug\win_WpfDemo.baml
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\obj\Debug\win_WpfDemo.g.cs
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\bin\Debug\itextsharp.dll
+C:\Users\michael.adams4\PD\Test_Wpf\Test_Wpf\bin\Debug\itextsharp.xml
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\obj\Debug\WPF Misc. Test.exe
+C:\Users\michael.adams4\PD\Demo_Wpf\Test_Wpf\obj\Debug\WPF Misc. Test.pdb
