@@ -4,17 +4,17 @@
   <description asmv2:publisher="Demo_Wpf" asmv2:product="Demo_Wpf" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.6" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Demo_Wpf.exe.manifest" size="4637">
+    <dependentAssembly dependencyType="install" codebase="Demo_Wpf.exe.manifest" size="5123">
       <assemblyIdentity name="Demo_Wpf.exe" version="1.10.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>J/fedBYJNrQfgXfFOKF7bZdGW4M=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ntfV7h4CaPNfozhII21I4u3jRtw9iGmaa+SXtiLgeac=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

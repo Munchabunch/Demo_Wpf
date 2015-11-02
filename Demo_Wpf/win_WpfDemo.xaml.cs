@@ -22,6 +22,9 @@ namespace Demo_Wpf
     {
         string Prompt;
 
+        string m_str_OldNumericText = "";
+        int m_i_OldNumericCursorPos = 0;
+
         ObservableCollection<DirectoryEntry> entries = new ObservableCollection<DirectoryEntry>();
         ObservableCollection<DirectoryEntry> subEntries = new ObservableCollection<DirectoryEntry>();
 
@@ -297,23 +300,24 @@ namespace Demo_Wpf
             }
         }
 
-        private void textbox_Numeric_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        private void textbox_Numeric_TextChanged(object sender, TextChangedEventArgs e)
         {
-            e.Handled = !IsTextNumeric(e.Text);
-        }
-        private void textbox_Numeric_Pasting(object sender, DataObjectPastingEventArgs e)
-        {
-            if (e.DataObject.GetDataPresent(typeof(String)))
+            // WORKING //
+
+            bool b_Ok = IsTextNumeric(textbox_Numeric.Text);
+
+            if (b_Ok)
             {
-                String text = (String)e.DataObject.GetData(typeof(String));
-                if (!IsTextNumeric(text))
+                if (textbox_Numeric.Text != m_str_OldNumericText)
                 {
-                    e.CancelCommand();
+                    m_str_OldNumericText = textbox_Numeric.Text;
+                    m_i_OldNumericCursorPos = textbox_Numeric.SelectionStart;
                 }
             }
             else
             {
-                e.CancelCommand();
+                textbox_Numeric.Text = m_str_OldNumericText;
+                textbox_Numeric.SelectionStart = m_i_OldNumericCursorPos;
             }
         }
 
@@ -339,7 +343,6 @@ namespace Demo_Wpf
             var myTextBox = new TextBox();
             myTextBox.Width = 60;
             myTextBox.Text = "1";
-            myTextBox.PreviewTextInput += textbox_Numeric_PreviewTextInput;
             oDockPnl_New.Children.Add(myTextBox);
             DockPanel.SetDock(myTextBox, Dock.Right);
 
@@ -432,12 +435,37 @@ namespace Demo_Wpf
             }
         }
 
-        private static bool IsTextNumeric(string text)
+        /// <summary>
+        /// Determine whether a string represents a valid decimal value.
+        /// </summary>
+        /// <param name="Text"></param>
+        /// <returns></returns>
+        private static bool IsTextNumeric(string Text)
         {
             // ToDo: Make sure there is only one decimal point and only one minus sign.
 
-            Regex regex = new Regex("[^0-9.-]+"); //regex that matches disallowed text
-            return !regex.IsMatch(text);
+            bool b_OK = true;
+
+            if (Text.Length > 0)
+            {
+                // Test the first character:
+                string c = Text[0].ToString();
+                if (!"-0123456789.".Contains(c)) b_OK = false;
+
+                for (int Pos = 1; Pos < Text.Length; Pos++)
+                {
+                    c = Text[Pos].ToString();
+                    if (!"0123456789.".Contains(c)) b_OK = false;
+                }
+
+                if (b_OK)
+                {
+                    // Count the decimal points in the text.
+                    int count = Text.Split('.').Length - 1;
+                    if (count > 1) b_OK = false;
+                }
+            }
+            return b_OK;
         }
 
         #endregion Private Methods

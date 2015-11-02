@@ -455,7 +455,10 @@
                          />
                 <Rectangle Fill="DarkMagenta" Height="49" Canvas.Left="86" Stroke="Black" Canvas.Top="65" Width="100" />
                 <Rectangle Fill="Black" Height="2" Canvas.Left="200" Stroke="Black" Canvas.Top="65" Width="200" />
-                <Button x:Name="button" Content="Button" Canvas.Left="234" Canvas.Top="114" Width="75" />
+                <Button x:Name="button" Content="Button" Canvas.Left="85" Canvas.Top="163" Width="75" />
+                <TextBlock x:Name="textBlock" Canvas.Left="200" TextWrapping="Wrap" Canvas.Top="92" Height="91" Width="200">
+                    The Canvas is the most basic layout panel in WPF. Its child elements are positioned by explicit coordinates.
+                </TextBlock>
             </Canvas>
         </TabItem>
         <TabItem Header="ViewBox" Name="tabitem_ViewBox">
@@ -609,19 +612,18 @@
         <TabItem Header="Text Boxes" Name="tabitem_NumericTextBox">
             <Canvas>
                 <TextBox Name="textbox_Numeric"
-                         Canvas.Left="10" Canvas.Top="10"
+                         Canvas.Left="10" Canvas.Top="76"
                          Height="34" Width="174"
                          BorderThickness="2"
                          FontSize="14"
-                         PreviewTextInput="textbox_Numeric_PreviewTextInput"
-                         DataObject.Pasting="textbox_Numeric_Pasting"
+                         TextChanged="textbox_Numeric_TextChanged"
                          >
                     <TextBox.Effect>
                         <DropShadowEffect/>
                     </TextBox.Effect>
                 </TextBox>
-                    <TextBox Name="textbox_Scrolling"
-                             Canvas.Left="210" Canvas.Top="10"
+                <TextBox Name="textbox_Scrolling"
+                             Canvas.Left="219" Canvas.Top="76"
                              Height="100" Width="174"
                              AcceptsReturn="True"
                              VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible"
@@ -630,6 +632,10 @@
                         <DropShadowEffect/>
                     </TextBox.Effect>
                 </TextBox>
+                <Label x:Name="label" Canvas.Left="10" Canvas.Top="35">
+                    Numeric text box:
+                </Label>
+                <Label x:Name="label_Copy" Canvas.Left="219" Canvas.Top="35" Content="Scrolling text box:" />
             </Canvas>
         </TabItem>
         <TabItem Header="ControlTemplates" Name="tabitem_CtrlTmpls">
