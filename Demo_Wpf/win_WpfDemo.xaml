@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="WPF Demo" Height="500" Width="721"
         FontFamily="Segoe UI"
+        Keyboard.PreviewKeyDown="Window_PreviewKeyDown" Keyboard.KeyDown="Window_KeyDown"
         >
     <Window.CommandBindings>
         <CommandBinding Command="New" CanExecute="CommonCommandBinding_CanExecute" />
@@ -1115,6 +1116,23 @@
                 <Button Name="btn_SetFocus_03" Grid.Row="2" Grid.Column="1" Click="btn_SetFocus_03_Click">Set Focus</Button>
                 <Button Name="btn_SetFocus_04" Grid.Row="3" Grid.Column="1" Click="btn_SetFocus_04_Click">Set Focus</Button>
             </Grid>
+        </TabItem>
+        <TabItem Header="Bubbling" Name="tabitem_Bubbling">
+            <Canvas
+                Keyboard.PreviewKeyDown="Canvas_PreviewKeyDown" Keyboard.KeyDown="Canvas_KeyDown"
+                >
+                <TextBox x:Name="textBox" Height="23" Canvas.Left="142" TextWrapping="Wrap" Canvas.Top="118" Width="189"
+                         />
+                <TextBox x:Name="textbox_Bubbling_Events" Canvas.Left="432" Canvas.Top="10" Height="381" Width="265"
+                         TextWrapping="Wrap"
+                         VerticalScrollBarVisibility="Visible"
+                         />
+                <Button x:Name="btn_Bubbling" Content="Button" Canvas.Left="142" Canvas.Top="163" Width="75" Click="btn_Bubbling_Click" />
+                <CheckBox x:Name="oCheckBox_Bubbling_WindowHandlingEvent" Content="Window Handling event" Canvas.Left="142" Canvas.Top="215"
+                          />
+                <CheckBox x:Name="oCheckBox_Bubbling_CanvasHandlingEvent" Content="Canvas Handling event" Canvas.Left="142" Canvas.Top="235"
+                          />
+            </Canvas>
         </TabItem>
     </TabControl>
 </Window>

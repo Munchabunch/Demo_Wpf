@@ -59,7 +59,21 @@ namespace Demo_Wpf
                 + "The Goops they talk while eating,\n"
                 + "   And loud and fast they chew;\n"
                 + "And that is why I’m glad that I\n"
-                + "   Am not a Goop--are you?\n";
+                + "   Am not a Goop -- are you?\n";
+        }
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            textbox_Bubbling_Events.AppendText("Window_PreviewKeyDown ''" + e.Key.ToString() + "''\n");
+            if (oCheckBox_Bubbling_WindowHandlingEvent.IsChecked == true)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            textbox_Bubbling_Events.AppendText("Window_KeyDown ''" + e.Key.ToString() + "''\n");
         }
 
         private void btn_CtrlTmpl_01_Click(object sender, RoutedEventArgs e)
@@ -383,6 +397,25 @@ namespace Demo_Wpf
         private void btn_SetFocus_04_Click(object sender, RoutedEventArgs e)
         {
             Keyboard.Focus(listbox_Focus_04);
+        }
+
+        private void btn_Bubbling_Click(object sender, RoutedEventArgs e)
+        {
+            textbox_Bubbling_Events.AppendText("btn_Bubbling_Click\n");
+        }
+
+        private void Canvas_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            textbox_Bubbling_Events.AppendText("Canvas_PreviewKeyDown ''" + e.Key.ToString() + "''\n");
+            if (oCheckBox_Bubbling_CanvasHandlingEvent.IsChecked == true)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Canvas_KeyDown(object sender, KeyEventArgs e)
+        {
+            textbox_Bubbling_Events.AppendText("Canvas_KeyDown ''" + e.Key.ToString() + "''\n");
         }
 
         #endregion Event Procedures
