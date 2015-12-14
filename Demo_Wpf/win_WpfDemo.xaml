@@ -64,8 +64,8 @@
                        />
                 <StackPanel Grid.Row="3" Grid.Column="1"
                             Orientation="Horizontal">
-                    <Button Name="btn_A" Height="30" Width="30" Margin="4" Click="btn_A_Click">A</Button>
-                    <Button Name="btn_B" Height="30" Width="30" Margin="4" Click="btn_B_Click">B</Button>
+                    <Button Name="btn_ImgA" Height="30" Width="30" Margin="4" Click="btn_ImgA_Click">A</Button>
+                    <Button Name="btn_ImgB" Height="30" Width="30" Margin="4" Click="btn_ImgB_Click">B</Button>
                     <Button Name="btn_ImgC" Height="30" Width="30" Margin="4" Click="btn_ImgC_Click">C</Button>
                 </StackPanel>
                 <MediaElement Name="oMediaElement_01"
@@ -176,10 +176,10 @@
         <TabItem Header="Dynamic DockPanel" Name="tabitem_DynamicDockPanel">
             <DockPanel Name="pnl_DynamicDock" LastChildFill="True">
                 <TextBox Text="Dock=Top" DockPanel.Dock="Top" Padding="10" />
-                <Button Name="btn_AddRow" Content="Add Row"
+                <Button Name="btn_ImgAddRow" Content="Add Row"
                         DockPanel.Dock="Bottom"
                         Padding="10"
-                        Click="btn_AddRow_Click"
+                        Click="btn_ImgAddRow_Click"
                         />
                 <TextBox Text="Last Child" TextWrapping="Wrap" Padding="10" />
             </DockPanel>
@@ -278,9 +278,12 @@
                 <Button Content="Helicon"
                         Margin="2"
                         />
-                <Button Content=""
-                        Margin="2"
-                        />
+                <Border BorderThickness="1" BorderBrush="Black" Margin="2">
+                    <Image Name="img_UniformGrid_01"
+                           Margin="2"
+                           Source="i/cat.jpeg"
+                       />
+                </Border>
                 <Button Content=""
                         Margin="2"
                         />
@@ -760,8 +763,8 @@
                         </ComboBox>
                     </ToolBar>
                     <ToolBar>
-                        <Button Name="btn_Auction" ToolTip="Aucion"
-                                Click="btn_Auction_Click"
+                        <Button Name="btn_ImgAuction" ToolTip="Aucion"
+                                Click="btn_ImgAuction_Click"
                                 >
                             <Image Source="i/icon16-gavel.gif" />
                         </Button>
@@ -1072,18 +1075,38 @@
                     <ListBoxItem Content="ListBoxItem" />
                     <ListBoxItem Content="ListBoxItem" />
                     <ListBoxItem Content="ListBoxItem" />
-                    <ListBoxItem Content="ListBoxItem" />
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="100" BorderThickness="1" BorderBrush="Black">Label</Label>
+                        <Label Width="40" BorderThickness="1" BorderBrush="Black">Label</Label>
+                        <Label Width="100" BorderThickness="1" BorderBrush="Black">Label</Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="100" BorderThickness="1" BorderBrush="Black">Longer label</Label>
+                        <Label Width="60" BorderThickness="1" BorderBrush="Black">Short label</Label>
+                        <Label Width="100" BorderThickness="1" BorderBrush="Black">Longer label</Label>
+                    </StackPanel>
+                </ListBox>
+                <ListView>
+                    <Button Content="Button"/>
+                    <CheckBox Content="Checkbox"/>
+                    <Separator/>
+                    <ListViewItem Name="oListViewItem_01" Content="ListViewItem" />
+                    <ListViewItem Name="oListViewItem_02" Content="ListViewItem" />
+                    <ListViewItem Content="ListViewItem" />
+                    <ListViewItem Content="ListViewItem" />
+                    <ListViewItem Content="ListViewItem" />
+                    <ListViewItem Content="ListViewItem" />
                     <StackPanel Orientation="Horizontal">
                         <Label Width="100">Label</Label>
                         <Label Width="40">Label</Label>
                         <Label Width="100">Label</Label>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Label Width="100">Longer label</Label>
-                        <Label Width="40">Longer label</Label>
-                        <Label Width="100">Longer label</Label>
+                        <Label Width="100" BorderThickness="1" BorderBrush="Black">Longer label</Label>
+                        <Label Width="60" BorderThickness="1" BorderBrush="Black">Short label</Label>
+                        <Label Width="100" BorderThickness="1" BorderBrush="Black">Longer label</Label>
                     </StackPanel>
-                </ListBox>
+                </ListView>
             </StackPanel>
         </TabItem>
         <TabItem Header="Focus" Name="tabitem_Focus">
@@ -1127,7 +1150,7 @@
                          TextWrapping="Wrap"
                          VerticalScrollBarVisibility="Visible"
                          />
-                <Button x:Name="btn_Bubbling" Content="Button" Canvas.Left="142" Canvas.Top="163" Width="75" Click="btn_Bubbling_Click" />
+                <Button x:Name="btn_ImgBubbling" Content="Button" Canvas.Left="142" Canvas.Top="163" Width="75" Click="btn_ImgBubbling_Click" />
                 <CheckBox x:Name="oCheckBox_Bubbling_WindowHandlingEvent" Content="Window Handling event" Canvas.Left="142" Canvas.Top="215"
                           />
                 <CheckBox x:Name="oCheckBox_Bubbling_CanvasHandlingEvent" Content="Canvas Handling event" Canvas.Left="142" Canvas.Top="235"

@@ -91,7 +91,7 @@ namespace Demo_Wpf
             e.CanExecute = true;
         }
 
-        private void btn_Auction_Click(object sender, RoutedEventArgs e)
+        private void btn_ImgAuction_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Let the bidding begin!");
         }
@@ -106,6 +106,18 @@ namespace Demo_Wpf
             oMediaElement_01.Play();
         }
 
+        private void btn_ImgA_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeImgSource(img_01, "i/cat.jpeg");
+        }
+        private void btn_ImgB_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeImgSource(img_01, "i/field.jpeg");
+        }
+        private void btn_ImgC_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeImgSource(img_01, "i/palmettos.jpeg");
+        }
         private void btn_01_Click(object sender, RoutedEventArgs e)
         {
             oMediaElement_01.Source = new Uri(@".\video\breakaway.mpeg", UriKind.Relative);
@@ -120,18 +132,6 @@ namespace Demo_Wpf
         {
             oMediaElement_01.Source = new Uri(@".\video\parachute.avi", UriKind.Relative);
             oMediaElement_01.Play();
-        }
-        private void btn_A_Click(object sender, RoutedEventArgs e)
-        {
-            ChangeImgSource(img_01, "i/cat.jpeg");
-        }
-        private void btn_B_Click(object sender, RoutedEventArgs e)
-        {
-            ChangeImgSource(img_01, "i/field.jpeg");
-        }
-        private void btn_ImgC_Click(object sender, RoutedEventArgs e)
-        {
-            ChangeImgSource(img_01, "i/palmettos.jpeg");
         }
 
         private void slider_Margin_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -335,7 +335,7 @@ namespace Demo_Wpf
             }
         }
 
-        private void btn_AddRow_Click(object sender, RoutedEventArgs e)
+        private void btn_ImgAddRow_Click(object sender, RoutedEventArgs e)
         {
             int i_Pos = pnl_DynamicDock.Children.Count;
 
@@ -399,9 +399,9 @@ namespace Demo_Wpf
             Keyboard.Focus(listbox_Focus_04);
         }
 
-        private void btn_Bubbling_Click(object sender, RoutedEventArgs e)
+        private void btn_ImgBubbling_Click(object sender, RoutedEventArgs e)
         {
-            textbox_Bubbling_Events.AppendText("btn_Bubbling_Click\n");
+            textbox_Bubbling_Events.AppendText("btn_ImgBubbling_Click\n");
         }
 
         private void Canvas_PreviewKeyDown(object sender, KeyEventArgs e)
